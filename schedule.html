@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule - CodeQuest 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #5e2b97, #cf628c);
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: #ff66ff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffccff;
+      transform: scale(1.1);
+    }
+
+    /* Title Styling */
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      color: white;
+      margin-top: 120px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ffccff;
+      display: inline-block;
+      padding-bottom: 10px;
+      text-shadow: 0 0 15px #ff66ff;
+      width: 100%;
+    }
+
+    /* Schedule Grid */
+    .schedule-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px 60px;
+      z-index: 1;
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 2px solid #ff66ff;
+      border-radius: 12px;
+      width: 300px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+    }
+
+    .box h3 {
+      margin-top: 0;
+      color: #ffccff;
+      font-size: 24px;
+      text-shadow: 0 0 10px #ffccff;
+    }
+
+    .box ul {
+      text-align: left;
+      padding-left: 20px;
+      list-style-type: square;
+      color: #f0f0f0;
+    }
+
+    .box ul li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    /* Media Query for Smaller Devices */
+    @media (max-width: 768px) {
+      .schedule-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="venue.html">Venue</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="rules.html">Rules & Eligibility</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Centered Heading -->
+  <div style="text-align:center;">
+    <h1>Schedule Overview</h1>
+  </div>
+
+  <div class="schedule-wrapper">
+    <div class="box">
+      <h3><b>Day 1: July 15, 2025</b></h3>
+      <ul>
+        <li>Registration and Breakfast</li>
+        <li>Opening Ceremony and Welcome</li>
+        <li>Team Formation and Idea Pitches</li>
+        <li>Hacking Begins</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3><b>Day 2: July 16, 2025</b></h3>
+      <ul>
+        <li>Registration and Breakfast</li>
+        <li>Opening Ceremony and Welcome</li>
+        <li>Team Formation and Idea Pitches</li>
+        <li>Hacking Begins</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3><b>Day 3: July 17, 2025</b></h3>
+      <ul>
+        <li>Registration and Breakfast</li>
+        <li>Opening Ceremony and Welcome</li>
+        <li>Team Formation and Idea Pitches</li>
+        <li>Hacking Begins</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

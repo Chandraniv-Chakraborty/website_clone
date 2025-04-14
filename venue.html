@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venue - CodeQuest 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* Sci-Fi Animated Gradient Background */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #3e1c47, #743b63, #2a003d);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      z-index: -1;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(15px);
+      padding: 20px 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ff66ff;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #ffccff;
+      text-shadow: 0 0 15px #ffccff, 0 0 30px #ffccff;
+      transform: scale(1.2) translateY(-5px);
+    }
+
+    /* Content Box Styling */
+    .container {
+      width: 85%;
+      max-width: 800px;
+      margin: 150px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      border: 2px solid #ff66ff;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 30px rgba(255,105,180,0.5);
+      text-align: center;
+      transform: scale(0.95);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(255,105,180,0.7);
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 30px;
+      color: #ffccff;
+      text-shadow: 0 0 25px #ffccff;
+      border-bottom: 2px solid #ffccff;
+      padding-bottom: 10px;
+    }
+
+    .section {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+    }
+
+    .section b {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    /* Floating Sci-Fi Particles */
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: rgba(255, 105, 180, 0.8);
+      border-radius: 50%;
+      animation: particleAnimation 3s infinite linear;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+
+    @keyframes particleAnimation {
+      0% { transform: scale(0); opacity: 0.7; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0.7; }
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 600px) {
+      .nav-links li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 40px 20px;
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .section {
+        font-size: 18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="rules.html">Rules & Eligibility</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>VENUE</h1>
+    <div class="section">The Kolkata Innovation Hub</div>
+    <div class="section">45/2, Park Street, Kolkata, West Bengal 700016, India</div>
+    <div class="section">Date: 15th - 17th July, 2025</div>
+    <div class="section"><b>Registration Fees: ₹500 per Team</b></div>
+  </div>
+
+  <!-- Floating Particles -->
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+
+</body>
+</html>

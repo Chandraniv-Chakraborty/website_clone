@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - CodeQuest 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1f1c3d, #0a0a20, #1b1f34);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      z-index: -1;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(15px);
+      padding: 20px 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #00ffcc;
+      text-shadow: 0 0 15px #00ffcc, 0 0 20px #00ffcc;
+      transform: scale(1.2) translateY(-5px);
+    }
+
+    .form-box {
+      width: 85%;
+      max-width: 500px;
+      margin: 150px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      border: 2px solid #00ffff;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 25px rgba(0,255,255,0.4);
+      text-align: center;
+      transform: scale(0.95);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .form-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0,255,255,0.7);
+    }
+
+    .form-box h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 10px;
+    }
+
+    input[type="text"], input[type="submit"] {
+      width: 90%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 2px solid #00ffff;
+      border-radius: 6px;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00ffcc;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: rgba(0, 255, 255, 0.7);
+      border-radius: 50%;
+      animation: particleAnimation 3s infinite linear;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    @keyframes particleAnimation {
+      0% { transform: scale(0); opacity: 0.5; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0.5; }
+    }
+
+    .particle:nth-child(1) { top: 5%; left: 15%; animation-duration: 4s; }
+    .particle:nth-child(2) { top: 25%; left: 35%; animation-duration: 3.5s; }
+    .particle:nth-child(3) { top: 50%; left: 60%; animation-duration: 5s; }
+    .particle:nth-child(4) { top: 75%; left: 80%; animation-duration: 3.8s; }
+
+    @media (max-width: 600px) {
+      .nav-links li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .form-box {
+        margin: 30px 20px;
+        padding: 25px;
+      }
+
+      .form-box h1 {
+        font-size: 24px;
+      }
+
+      input[type="text"], input[type="submit"] {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="rules.html">Rules & Eligibility</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-box">
+    <h1>REGISTER</h1>
+    <form>
+      <input type="text" name="name" placeholder="Name" required><br>
+      <input type="text" name="contact" placeholder="Contact" required><br>
+      <input type="text" name="address" placeholder="Address" required><br>
+      <input type="submit" value="SUBMIT">
+    </form>
+  </div>
+
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+
+</body>
+</html>
+
+
+
+
+
